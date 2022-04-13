@@ -60,10 +60,10 @@
 
 
     $ogrenciDetaylari = array(
-        adi=> "Tolgahan" , yasi=>20, soyadi=>"Ayaz", bolum=>"Bilgisayar" , ders1 => "Veri Tabanı", ders2 => "Web Programlama" , ders3 => "Mobil Programlama", sinif=>2);
+        "adi"=> "Tolgahan" , "yasi"=>20, "soyadi"=>"Ayaz", "bolum"=>"Bilgisayar" , "ders1" => "Veri Tabanı", "ders2" => "Web Programlama" , "ders3" => "Mobil Programlama", "sinif"=>2);
     
          
-    print $ogrenciDetaylari[0][adi];
+    print $ogrenciDetaylari["adi"];
     
     
     echo "<pre>";
@@ -78,9 +78,9 @@
     echo "Öğrencinin Dersleri: <br>";
     
     
-    echo $ogrenciDetaylari["dersler"]["ders1"] . "<br>";
-    echo $ogrenciDetaylari["dersler"]["ders2"] . "<br>";
-    echo $ogrenciDetaylari["dersler"]["ders3"] . "<br>";
+    echo $ogrenciDetaylari["ders1"] . "<br>";
+    echo $ogrenciDetaylari["ders2"] . "<br>";
+    echo $ogrenciDetaylari["ders3"] . "<br>";
     
 
     /* Uygulama: Öğrenci Detayları Dizisindeki Her Öğrencinin Detaylarını Alt Alta yazdırınız. */
@@ -120,23 +120,21 @@
     );
 
     $ogrenciDetaylari = array(
-        adi => "Tolgahan" , soyadi=> "Ayaz" , yasi=>20, bolum=>"Bilgisayar" 
-        
-
-        adi => "Ayşen" , soyadi=> "Güler" , yasi=>22, bolum=>"Matematik" 
+        "adi" => "Tolgahan" , "soyadi"=> "Ayaz" , "yasi"=>20, "bolum"=>"Bilgisayar" ,
+        "adi" => "Ayşen" , "soyadi"=> "Güler" , "yas"=>22, "bolum"=>"Matematik" 
 
     );
 
     
     
     
-        for ( $i=0; $i<count($ogrenciDetaylari); $i++); 
+        for ( $a=0; $a<count($ogrenciDetaylari); $a++); 
         
         {
-            print $ogrenciDetaylari[$i][adi] . "-";
-            print $ogrenciDetaylari[$i][soyadi] . "-";
-            print $ogrenciDetaylari[$i][yasi] . "-";
-            print $ogrenciDetaylari[$i][bolum] . "<br>";
+            print $ogrenciDetaylari["adi"] . "-";
+            print $ogrenciDetaylari["soyadi"] . "-";
+            print $ogrenciDetaylari["yasi"] . "-";
+            print $ogrenciDetaylari["bolum"] . "<br>";
         }
     
         
